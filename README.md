@@ -17,9 +17,24 @@ Elasticsearch is a large dep to pull in just to get sequential uuids. If you alr
 
 ## Preventing duplicates
 
-If you are generating time series data that doesn't have a natural primary key, you want to make sure that if there are hiccups throughout the system a unique UUID at message creation can give once and only once messaging guarantees. 
+If you are generating time series data that doesn't have a natural primary key, you want to make sure that if there are hiccups throughout the system a unique UUID at message creation can give once and only once messaging guarantees. This is especially useful if using Kafka, RabbitMQ, or other messaging systems for guaranteed delivery. 
 
 ## Performance
 
 Random UUIDs are not good for primary key/clustered index as they cause lots of page splits and overheads. Time based UUIDs alleviate these problems for both SQL and elasticsearch based indexes. 
 
+## Building
+
+Clone the repo and run
+
+```
+gradle publishToMavenLocal
+```
+
+Once published to your local Maven you can pick up from any other project, eg from sbt:
+
+```
+"org.elasticflake" % "elasticflake" % "0.1-SNAPSHOT"
+```
+
+If someone finds this useful, open a pull request to get published to Maven central and I can version and make that happen.
