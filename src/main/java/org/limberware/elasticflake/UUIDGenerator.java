@@ -17,11 +17,11 @@
  * under the License.
  */
 
-package org.elasticflake;
+package org.limberware.elasticflake;
 
-import java.security.SecureRandom;
-
-class SecureRandomHolder {
-    // class loading is atomic - this is a lazy & safe singleton to be used by this package
-    public static final SecureRandom INSTANCE = new SecureRandom();
+/**
+ * Generates opaque unique strings.
+ */
+interface UUIDGenerator {
+    public String getBase64UUID();
 }

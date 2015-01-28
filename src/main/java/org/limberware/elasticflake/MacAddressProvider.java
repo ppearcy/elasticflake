@@ -17,16 +17,18 @@
  * under the License.
  */
 
-package org.elasticflake;
+package org.limberware.elasticflake;
 
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Enumeration;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MacAddressProvider {
 
-    //private static final Logger logger = LoggerFactory.getLogger(MacAddressProvider.class);
+    private static final Logger logger = LoggerFactory.getLogger(MacAddressProvider.class);
 
     private static byte[] getMacAddress() throws SocketException {
         Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
@@ -63,12 +65,12 @@ public class MacAddressProvider {
         try {
             address = getMacAddress();
         } catch( SocketException se ) {
-            //logger.warn("Unable to get mac address, will use a dummy address", se);
+            logger.warn("Unable to get mac address, will use a dummy address", se);
             // address will be set below
         }
 
         if (!isValidAddress(address)) {
-            //logger.warn("Unable to get a valid mac address, will use a dummy address");
+            logger.warn("Unable to get a valid mac address, will use a dummy address");
             address = constructDummyMulticastAddress();
         }
 

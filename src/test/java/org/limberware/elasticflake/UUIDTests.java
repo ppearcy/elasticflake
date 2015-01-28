@@ -16,10 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.elasticflake;
+package org.limberware.elasticflake;
 
 import junit.framework.TestCase;
 import org.junit.Test;
+import org.limberware.elasticflake.RandomBasedUUIDGenerator;
+import org.limberware.elasticflake.TimeBasedUUIDGenerator;
+import org.limberware.elasticflake.UUIDGenerator;
 
 import java.util.HashSet;
 

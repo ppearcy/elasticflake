@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.elasticflake;
+package org.limberware.elasticflake;
 
 import java.nio.charset.Charset;
 import java.util.Locale;
@@ -168,7 +168,8 @@ import java.util.Locale;
  * @author rob@iharder.net
  * @version 2.3.7
  */
-public class Base64 {
+public class
+        Base64 {
 
 /* ********  P U B L I C   F I E L D S  ******** */
 

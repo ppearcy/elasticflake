@@ -34,7 +34,7 @@ gradle publishToMavenLocal
 Once published to your local Maven you can pick up from any other project, eg from sbt:
 
 ```
-"org.elasticflake" % "elasticflake" % "0.1-SNAPSHOT"
+"org.limberware" % "elasticflake" % "0.1-SNAPSHOT"
 ```
 
 If someone finds this useful, open a pull request to get published to Maven central and I can version and make that happen.

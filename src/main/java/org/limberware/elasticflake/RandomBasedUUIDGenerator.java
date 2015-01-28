@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.elasticflake;
+package org.limberware.elasticflake;
 
 import java.io.IOException;
 import java.util.Random;

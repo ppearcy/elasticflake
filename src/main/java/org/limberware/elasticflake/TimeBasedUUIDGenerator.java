@@ -17,12 +17,10 @@
  * under the License.
  */
 
-package org.elasticflake;
+package org.limberware.elasticflake;
 
 import java.io.IOException;
-import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 /** These are essentially flake ids (http://boundary.com/blog/2012/01/12/flake-a-decentralized-k-ordered-unique-id-generator-in-erlang) but
  *  we use 6 (not 8) bytes for timestamp, and use 3 (not 2) bytes for sequence number. */
